@@ -1,0 +1,64 @@
+// ! En media queries pour n'être joué que en desktop
+@media (min-width: 600px) {
+  .logo-nav-size {
+    margin-left: 50px;
+    margin-top: 10px;
+    height: 70px;
+    float: left;
+  }
+  .background-nav {
+    width: 100%;
+    height: 90px;
+    @include shadows;
+    background-color: antiquewhite;
+  }
+  .nav-position {
+    display: flex;
+    margin-left: 200px;
+    justify-content: flex-start;
+
+    a {
+      margin-left: 0px;
+      margin-right: 25px;
+      display: flex;
+      align-items: center;
+      height: 90px;
+      color: $black;
+      font-family: "Montserrat";
+      text-transform: uppercase;
+      transition: 200ms;
+
+      &:hover {
+        transition: 200ms;
+        color: $orange;
+      }
+    }
+  }
+
+  .nav-d-active {
+    p {
+      color: $black;
+      animation: fade-in-left 2s;
+      border-bottom: $white solid 2px;
+    }
+  }
+  .rm {
+    margin-left: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: baseline;
+    font-family: "Montserrat";
+    font-weight: 300;
+  }
+}
+
+@media (max-width: 600px) {
+  .logo-nav-size {
+    display: none;
+  }
+  .nav-position {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      div.container { text-align: center; } h1 { text-align: center; color: red;
+      text-decoration: underline; } ul { color: orange; list-style: none;
+      text-align: center; padding: 0; margin: 1rem auto; } ul li { display:
+      inline; margin: 0 1rem; } div.image-container { text-align: center; } img
+      { width: 50%; height: auto; border: 2px solid black; border-radius: 10px;
+      box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.34); }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>Welcome {{firstname}} {{lastname}}</h1>
+      <ul>
+        <li>Orange</li>
+        <li>Pineapple</li>
+        <li>Mango</li>
+      </ul>
+      <div class="image-container">
+        <img src="cid:{{src}}" alt={{alt}} />
+      </div>
+      <a href={{link}}>{{linkName}}</a>
+    </div>
+  </body>
+
+</html>

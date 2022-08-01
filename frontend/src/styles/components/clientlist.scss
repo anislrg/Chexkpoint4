@@ -1,0 +1,121 @@
+.client-list-container {
+  display: flex;
+
+  // color: $white;
+  // margin-bottom: 25px;
+  // margin-right: 15px;
+  flex-direction: column;
+}
+.client-list {
+  justify-content: center;
+  display: flex;
+}
+.client-list-display {
+  background: $red;
+  animation: pulse 2s infinite;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.client-list-display-done {
+  background: $vert;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.client-list-num {
+  margin-top: 15px;
+  font-family: "Montserrat", sans-serif;
+  border: solid 1px grey;
+  display: flex;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(4px);
+  box-shadow: 0 1px 22px 0 rgba(253, 253, 253, 0.37);
+  -webkit-backdrop-filter: blur(4px);
+  padding-left: 25px;
+  padding-right: 15px;
+  height: 70px;
+  width: 100%;
+  align-items: center;
+  transition: 0.25s;
+
+  &:hover {
+    transition: 1s;
+    border: solid 1px lightgrey;
+  }
+  li {
+    margin-left: 25px;
+  }
+  select {
+    margin-left: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 40px;
+    // background-color: rgb(214, 104, 104);
+    // width: 70px;
+  }
+}
+.clientId {
+  grid-area: 1/1/2/2;
+}
+
+.clientFn {
+  grid-area: 2/1;
+}
+.clientLn {
+  grid-area: 3/1/3/2;
+}
+.clientEmail {
+  grid-area: 4/1/4/1;
+}
+
+.clientPayment {
+  grid-area: 3/2/4/2;
+}
+
+.clientStatus {
+  grid-area: 4/3/3/3;
+}
+
+.clientDate {
+  grid-area: 1/-3/2/3;
+}
+
+.clientDelete {
+  background: rgb(224, 188, 188);
+  height: 20px;
+  cursor: pointer;
+  width: 70px;
+  border: solid 1px black;
+}
+
+.no {
+  background: $red;
+  border-radius: 6px;
+  height: 70px;
+  cursor: pointer;
+  width: 100px;
+  border: none;
+  align-items: center;
+}
+
+.ok {
+  background: $red;
+  border-radius: 6px;
+  height: 70px;
+  cursor: pointer;
+  width: 100px;
+  border: none;
+  align-items: center;
+}
