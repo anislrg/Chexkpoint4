@@ -1,0 +1,249 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap");
+/* Desktop */
+
+.contact_form {
+  background: #fdfafa;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  /* border-radius: 50px 0px 0px 0px; */
+  height: 63vh;
+  padding: 1rem 4rem;
+}
+.form-contact {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 24px;
+  letter-spacing: 0.05em;
+  width: 50%;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  justify-items: end;
+}
+
+.img-contact img {
+  height: 63vh;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  width: auto;
+  border-radius: 0px 0px 50px 0px;
+}
+
+.logo-maraicheur {
+  width: auto;
+  height: 75px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.logo-maraicheur2 {
+  display: none;
+}
+.titre-contact {
+  text-align: center;
+  margin-top: 2rem;
+  font-family: "Poppins", sans-serif;
+  font-style: normal;
+  letter-spacing: 3px;
+  font-weight: 100;
+  font-size: 25px;
+  line-height: 48px;
+  text-transform: uppercase;
+}
+
+.hr-contact {
+  width: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.container-preorder {
+  display: flex;
+  justify-content: center;
+}
+
+.info-contact {
+  text-align: left;
+}
+
+.name-contact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-contact label {
+  width: 45%;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.nom-prenom {
+  border-radius: 5px;
+  font-family: "Poppins", sans-serif;
+  padding-left: 5px;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  height: 2rem;
+  margin-bottom: 1.5rem;
+}
+.nom-prenom:focus {
+  outline: none;
+}
+.email-label {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.email-label input:focus {
+  outline: none;
+}
+.email-label input {
+  padding-left: 5px;
+  font-family: "Poppins", sans-serif;
+  border: none;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contact-label {
+  display: block;
+}
+
+.message-contact textarea {
+  border-radius: 10px;
+  resize: none;
+  padding-left: 5px;
+  padding-top: 5px;
+  font-family: "Poppins", sans-serif;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  border: none;
+  height: 12rem;
+  margin-bottom: -1rem;
+}
+.message-contact textarea:focus {
+  outline: none;
+}
+.message-contact {
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+.container-button-contact {
+  display: flex;
+  justify-content: center;
+}
+.button-contact {
+  width: 250px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 25px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  border: none;
+  height: 50px;
+  background-color: #d9afaf;
+  box-shadow: 2px 2px 4px rgb(0 0 0 / 25%);
+  border-radius: 6px;
+  text-decoration: underline;
+  transition: 0.5s;
+}
+.button-contact:hover {
+  transition: 1s;
+  transform: scale(1.05);
+}
+.map-contact {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Mobile */
+
+@media screen and (max-width: 700px) {
+  .form-contact {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.05em;
+    width: 100%;
+    margin-top: 25px;
+  }
+  .contact_form {
+    background: #fdfafa;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+    /* border-radius: 50px 0px 0px 0px; */
+    height: 120vh;
+    padding: 1rem 4rem;
+  }
+  .img-contact img {
+    display: none;
+    background: #f9f9f9;
+    box-shadow: 2.5px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 50px 0px 50px 0px;
+    /* margin-right: 1rem; */
+    margin-top: 2rem;
+  }
+  .wrapper {
+    display: inline;
+  }
+  .titre-contact {
+    padding-top: 5rem;
+    margin-top: 0;
+  }
+  .button-contact {
+    width: 195px;
+    height: 41px;
+    align-items: center;
+  }
+  .img-contact {
+    display: none;
+  }
+  .logo-maraicheur {
+    display: none;
+  }
+  .logo-mobile {
+    display: flex;
+    justify-content: center;
+  }
+  .logo-maraicheur2 {
+    display: block;
+    height: 5rem;
+    width: 5rem;
+  }
+  .nom-prenom {
+    width: 7rem;
+  }
+
+  .name-contact label {
+    padding-right: 9rem;
+  }
+
+  .email-label input {
+    width: 16rem;
+  }
+  .message-contact textarea {
+    height: 8rem;
+    width: 16rem;
+  }
+
+  .map-contact {
+    display: flex;
+    justify-content: center;
+    margin: 2rem;
+  }
+
+  .info-contact {
+    margin-top: 15px;
+  }
+}

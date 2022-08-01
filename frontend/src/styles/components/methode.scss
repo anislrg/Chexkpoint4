@@ -1,0 +1,173 @@
+.methodeGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0px 0px;
+  align-items: center;
+}
+
+.gridimg2 {
+  margin: 10px 10px 15px 10px;
+}
+.gridtext2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 10px 10px 15px 10px;
+}
+
+.gridimg3 {
+  margin: 10px 10px 15px 10px;
+  grid-area: 2 / 2 / 3 / 2;
+}
+
+.gridtext3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  margin: 10px 10px 15px 10px;
+  grid-area: 2 / 0 / 3 / 3;
+}
+
+.gridimg4 {
+  margin: 10px 10px 15px 10px;
+}
+
+.gridtext4 {
+  font-family: "Poppins", sans-serif;
+  margin: 10px 10px 15px 10px;
+}
+
+.bodyMain {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 10px 10px 15px 10px;
+  padding: 0;
+}
+
+.bodySec {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 10px 15px 10px;
+  line-height: 26px;
+  padding: 0;
+}
+
+.bodyThird {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 10px 15px 10px;
+  line-height: 26px;
+  padding: 0;
+}
+
+.bodyFourth {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 10px 10px 15px 10px;
+  line-height: 26px;
+  padding: 0;
+}
+
+.textUnderline {
+  width: 90%;
+  height: 1px;
+  background-color: #cccccc;
+}
+
+.imageMethode {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  height: 55vh;
+  width: 100%;
+  object-fit: cover;
+}
+
+.imageMethodeSecond {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.imageMethodeThird {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 10%;
+}
+.imageMethodeFourth {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 10%;
+}
+.MuiButtonBase-root:disabled {
+  display: none;
+}
+#buttondisabled {
+  display: none;
+}
+.text-container2 {
+  display: flex;
+}
+@media screen and (max-width: 900px) {
+  .text-container2 {
+    display: none;
+  }
+  #buttondisabled {
+    display: flex;
+    border: solid 2px #2c2f33;
+    color: #2c2f33;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: 3px;
+    font-size: 10px;
+    margin-right: 15px;
+  }
+  .methodeGrid {
+    display: flex;
+    flex-direction: column;
+  }
+  .bodyMain {
+    margin: 10px 10px 15px 10px;
+    padding: 0;
+  }
+  .bodySec {
+    margin: 10px 10px 15px 10px;
+    padding: 0;
+  }
+  .imageMethodeSecond {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+  .bodyThird {
+    margin: 10px 10px 15px 10px;
+    padding: 0;
+  }
+  .imageMethodeThird {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+  .bodyFourth {
+    margin: 10px 10px 15px 10px;
+    padding: 0;
+  }
+  .imageMethodeFourth {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    width: 100%;
+  }
+  .textUnderline {
+    width: 90%;
+    height: 1px;
+    background-color: #cccccc;
+  }
+  .imageMethode {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    height: 30vh;
+    object-fit: cover;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}

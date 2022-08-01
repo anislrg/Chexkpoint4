@@ -1,0 +1,130 @@
+.container-preorder-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.mep {
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  width: 50%;
+  flex-direction: column;
+  background: #fdfafa;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  // border-radius: 50px 0px 50px 0px;
+  height: auto;
+
+  input {
+    display: flex;
+    margin-top: 5px;
+    padding-left: 5px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    border: none;
+    width: 600px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    height: 45px;
+    margin-bottom: 1.5rem;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  label {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    padding-bottom: 5px;
+  }
+
+  select {
+    margin-left: 15px;
+    height: 45px;
+    width: 500px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  div {
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    p {
+      margin-left: 1.1em;
+      padding-bottom: 5px;
+    }
+  }
+  button {
+    width: 250px;
+    margin-bottom: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+    color: $white;
+    border: none;
+    height: 50px;
+    background: #d9afaf;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    text-decoration: underline;
+    transition: 1s;
+
+    &:hover {
+      transition: 1s;
+      transform: scale(1.05);
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .mep {
+    width: 90%;
+    input {
+      width: 200px;
+    }
+
+    button {
+      margin-left: 0px;
+    }
+
+    select {
+      margin: 0 15px;
+      height: 45px;
+      width: 230px;
+      border: none;
+      border-radius: 5px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+
+      p {
+        margin-left: 1.1em;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}
