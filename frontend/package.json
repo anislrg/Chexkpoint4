@@ -12,6 +12,8 @@
   "dependencies": {
     "@emotion/react": "^11.9.3",
     "@emotion/styled": "11.9.3",
+    "@mobiscroll/cli": "^1.7.2",
+    "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-5.17.2.tgz",
     "@mui/material": "^5.9.1",
     "axios": "^0.27.2",
     "html-react-parser": "^3.0.1",

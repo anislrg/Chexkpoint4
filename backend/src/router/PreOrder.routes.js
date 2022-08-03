@@ -5,6 +5,7 @@ const { PreOrderController } = require("../controllers");
 const router = express.Router();
 
 router.get("/", PreOrderController.browse);
+router.get("/dates", PreOrderController.getAllDates);
 router.get("/:id", PreOrderController.read);
 router.post("/", PreOrderController.add);
 router.put("/archived/:id", PreOrderController.archived);

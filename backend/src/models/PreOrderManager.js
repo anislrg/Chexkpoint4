@@ -42,6 +42,10 @@ class PreOrderManager extends AbstractManager {
     ]);
   }
 
+  findByDates() {
+    return this.connection.query(`SELECT dates FROM ${this.table}`);
+  }
+
   update(preorder) {
     return this.connection.query(
       `UPDATE ${this.table} SET checkboxStatus = ? WHERE id = ? `,

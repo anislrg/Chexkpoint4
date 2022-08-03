@@ -1,12 +1,39 @@
+/* eslint-disable prefer-destructuring */
 /* eslint-disable no-alert */
 /* eslint-disable no-restricted-globals */
 import { useState, useEffect } from "react";
 import axios from "axios";
-import moment from "moment/min/moment-with-locales";
 import "moment/locale/fr";
 import AlertSucces from "./AlertSucces";
 // ^ specify moment like this due to a bug we need to point out the dir
 // to change the local timezone of moment.js
+
+const formatDate = (date) => {
+  const timestampForMysql = new Date(date);
+  const offset = timestampForMysql.getTimezoneOffset();
+
+  timestampForMysql.setMinutes(timestampForMysql.getMinutes() + offset * -1);
+  const newDate = timestampForMysql.toISOString();
+
+  const splitDate = newDate.split("T");
+  const splitYMD = splitDate[0].split("-");
+  const hour = splitDate[1].split(".");
+  hour.pop();
+
+  const year = splitYMD[0];
+  const month = splitYMD[1];
+  const day = splitYMD[2];
+
+  return {
+    originalDate: date,
+    year,
+    month,
+    day,
+    hour: hour[0],
+    fullYMD: splitDate[0],
+    fullDMY: `${day}-${month}-${year}`,
+  };
+};
 export default function ClientList() {
   const [clientList, setClientList] = useState([]);
   const [success, setSuccess] = useState(false);
@@ -23,9 +50,16 @@ export default function ClientList() {
     try {
       const data = await axios
         .get(`${import.meta.env.VITE_BACKEND_URL}preorder`)
-        .then((response) => response.data);
-
-      setClientList(data);
+        .then((response) => {
+          const datas = response.data;
+          const newDate = formatDate(datas.dates);
+          /* eslint-disable-next-line */
+          datas.dates = newDate;
+          return datas;
+        });
+      if (data) {
+        setClientList(data);
+      }
     } catch (err) {
       if (err.sendStatus === 401) {
         // eslint-disable-next-line
@@ -106,16 +140,15 @@ export default function ClientList() {
       </div>
       {clientList.length === 1 ? (
         <p className="nothinghere">
-          Il n'y à rien par ici... <br />
+          Il n'y à pas de reservation pour le moment... <br />
           <br />
-          Reviens plus-tard lorsque des clients auront faim..
+          Reviens plus-tard lorsque des clients souhaiterons un rendez-vous..
         </p>
       ) : (
         clientList
           .filter((client) => client.archived === isArchived)
           .map((clients) => {
             // eslint-disable-next-line no-unused-vars
-            const dateFormat = moment().format("l");
             const clientStyle =
               clients.checkboxStatus === 0
                 ? "client-list-display"
@@ -132,7 +165,7 @@ export default function ClientList() {
                     <li className="clientLn">Nom: {clients.lastname}</li>
                     <li className="clientEmail">Numéro tel: {clients.email}</li>
                     <li className="clientDate">
-                      Date de rendez-vous: {clients.dates}
+                      Date de rendez-vous: {clients.dates.fullDMY}
                     </li>
                     <select
                       value={clients.checkboxStatus}
