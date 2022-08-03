@@ -1,24 +1,26 @@
 {
-  "name": "template-fullstack",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "setup": "npm i && husky install && npm --prefix ./frontend i && npm --prefix ./backend i",
-    "dev": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./frontend run dev\" \"npm --prefix ./backend run dev\"",
-    "dev-front": "npm --prefix ./frontend run dev",
-    "dev-back": "npm --prefix ./backend run dev",
-    "lint": "npm --prefix ./frontend run lint && npm --prefix ./backend run lint",
-    "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix"
-  },
-  "keywords": [],
-  "author": "Wild Code School",
-  "license": "ISC",
-  "devDependencies": {
-    "concurrently": "^7.0.0",
-    "husky": "^7.0.4"
-  },
-  "dependencies": {
-    "html-react-parser": "^3.0.1"
-  }
+    "name": "template-fullstack",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "setup": "npm i && husky install && npm --prefix ./frontend i && npm --prefix ./backend i",
+        "dev": "concurrently -n front,back -c green,yellow -t \"HH:mm:ss\" -p \"{name} {time}\" \"npm --prefix ./frontend run dev\" \"npm --prefix ./backend run dev\"",
+        "dev-front": "npm --prefix ./frontend run dev",
+        "dev-back": "npm --prefix ./backend run dev",
+        "lint": "npm --prefix ./frontend run lint && npm --prefix ./backend run lint",
+        "fix": "npm --prefix ./frontend run fix && npm --prefix ./backend run fix"
+    },
+    "keywords": [],
+    "author": "Wild Code School",
+    "license": "ISC",
+    "devDependencies": {
+        "concurrently": "^7.0.0",
+        "husky": "^7.0.4"
+    },
+    "dependencies": {
+        "@mobiscroll/cli": "^1.7.2",
+        "@mobiscroll/react": "https://npm.mobiscroll.com/@mobiscroll/react-trial/-/react-trial-5.17.2.tgz",
+        "html-react-parser": "^3.0.1"
+    }
 }

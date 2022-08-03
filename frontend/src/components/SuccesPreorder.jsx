@@ -14,7 +14,7 @@ function SuccesPreorder() {
     <div>
       <Snackbar open={open} autoHideDuration={5000} onClose={handleClose}>
         <Alert onClose={handleClose} severity="success" sx={{ width: "100%" }}>
-          Votre précommande a bien été prise en compte. Nous vous contacterons
+          Votre réservation a bien été prise en compte. Nous vous contacterons
           bientôt.
         </Alert>
       </Snackbar>

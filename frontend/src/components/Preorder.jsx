@@ -1,7 +1,8 @@
 import axios from "@services/axios";
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Datepicker } from "@mobiscroll/react";
+import "@mobiscroll/react/dist/css/mobiscroll.min.css";
 import SuccesPreorder from "./SuccesPreorder";
-// import WarningPreorder from "./WarningPreorder";
 
 export default function ClientList() {
   const [clientList, setClientList] = useState();
@@ -9,6 +10,7 @@ export default function ClientList() {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [dates, setDates] = useState("");
+  const [invalidDates, setInvalideDates] = useState([]);
 
   const [succes, setSucces] = useState(false);
 
@@ -21,7 +23,24 @@ export default function ClientList() {
     });
     setSucces(true);
   };
+  const getDates = async () => {
+    axios
+      .get(`${import.meta.env.VITE_BACKEND_URL}preorder/dates`)
+      .then((res) => setInvalideDates(res.data));
+  };
 
+  useEffect(() => {
+    getDates();
+  }, []);
+  const myLabels = React.useMemo(() => {
+    return [
+      {
+        start: "2022-08-01",
+        textColor: "#e1528f",
+        title: "1 SPOTS",
+      },
+    ];
+  }, []);
   return (
     <section className="container-preorder-form">
       {succes ? <SuccesPreorder /> : ""}
@@ -53,14 +72,22 @@ export default function ClientList() {
             onChange={(e) => setEmail(e.target.value)}
           />
         </label>
-        <div>
-          <p>Date :</p>
-          <input
-            type="date"
+        <label htmlFor="dates">
+          Selectioné une date
+          <Datepicker
+            controls={["calendar", "timegrid"]}
+            min="2022-08-01T00:00"
+            max="2029-02-01T00:00"
+            minTime="08:00"
+            maxTime="19:59"
+            stepMinute={60}
+            labels={myLabels}
+            invalid={invalidDates}
+            onChange={(e) => setDates(e.value)}
             value={dates}
-            onChange={(e) => setDates(e.target.value)}
+            returnFormat="iso8601"
           />
-        </div>
+        </label>
         <button type="button" onClick={() => postClient(clientList)}>
           Réserver
         </button>

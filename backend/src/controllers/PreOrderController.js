@@ -27,6 +27,26 @@ class PreOrderController {
       });
   };
 
+  static getAllDates = async (req, res) => {
+    const result = await models.preorder
+      .findByDates()
+      .then(([rows]) => {
+        if (rows[0] == null) {
+          return res.sendStatus(404);
+        }
+        return rows;
+      })
+      .catch((err) => {
+        console.error(err);
+        res.sendStatus(500);
+      });
+
+    const response = await result.map((date) => {
+      return { start: date.dates, end: date.dates };
+    });
+    res.send(response);
+  };
+
   static edit = (req, res) => {
     const preorder = req.body;
     // console.log(preorder);
