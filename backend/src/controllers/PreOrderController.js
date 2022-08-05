@@ -42,7 +42,7 @@ class PreOrderController {
       });
 
     const response = await result.map((date) => {
-      return { start: date.dates, end: date.dates };
+      return { start: date.dates, end: date.dates, title: date.lastname };
     });
     res.send(response);
   };

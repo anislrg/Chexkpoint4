@@ -43,7 +43,7 @@ class PreOrderManager extends AbstractManager {
   }
 
   findByDates() {
-    return this.connection.query(`SELECT dates FROM ${this.table}`);
+    return this.connection.query(`SELECT dates, lastname FROM ${this.table}`);
   }
 
   update(preorder) {
